@@ -42,13 +42,16 @@ langSelect.addEventListener("change", () => {
 
 window.addEventListener("load", () => {
   currentLang = localStorage.getItem("language");
-  location.href = window.location.pathname + "#" + currentLang;
-  document.querySelector("title").textContent = currentText["unit"][currentLang];
-  for (let key in currentText) {
-    const element = document.querySelector(`[data-lang=${key}]`);
-    if (element) {
-      element.textContent = currentText[key][currentLang] || 'en';
+  if(currentLang) {
+    location.href = window.location.pathname + "#" + currentLang;
+    document.querySelector("title").textContent = currentText["unit"][currentLang];
+    for (let key in currentText) {
+      const element = document.querySelector(`[data-lang=${key}]`);
+      if (element) {
+        element.textContent = currentText[key][currentLang];
+      }
     }
-  }
-  langSelect.value = currentLang;
+    langSelect.value = currentLang;
+  } 
+ 
 });
