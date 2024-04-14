@@ -1,0 +1,9 @@
+// flex mixin with parameters
+
+@mixin flex-mix($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+

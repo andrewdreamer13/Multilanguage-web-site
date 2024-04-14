@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Multilanguage website with JS" />
+    <meta name="keywords" content="Multilanguage website" />
+    <link
+      rel="shortcut icon"
+      href="../images/javascript.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>multilanguage website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo.png" alt="logo" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link nav__link-active" href="#!" data-lang="headerNav1">programing language</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="html.html" data-lang="headerNav2">markup language</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="css.html" data-lang="headerNav3">style language</a>
+            </li>
+          </ul>
+        </nav>
+        <select class="lang" name="lang" id="lang">
+          <option class="lang__item" value="en" selected>en</option>
+          <option class="lang__item" value="ua">ua</option>
+          <option class="lang__item" value="ru">ru</option>
+        </select>
+        <button class="burger" aria-label="burger-menu">
+          <span class="burger__span burger__span-one"></span>
+          <span class="burger__span burger__span-two"></span>
+          <span class="burger__span burger__span-three"></span>
+        </button>
+      </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2 class="hero__title" data-lang="sectionTitle1">Something about JS</h2>
+          <div class="hero__inner">
+            <div class="hero__content">
+              <p class="hero__text" data-lang="sectionText1">
+                JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+              </p>
+            </div>
+            <div class="hero__img-box">
+              <img class="hero__img" src="images/logo.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="modules/data.js" type="module"></script>
+    <script src="modules/app.js" type="module"></script>
+    <script src="header.js"></script>
+  </body>
+</html>
